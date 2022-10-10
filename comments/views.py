@@ -1,4 +1,3 @@
-from jsonschema import RefResolutionError
 from .models import Comments
 from django.http import JsonResponse
 
