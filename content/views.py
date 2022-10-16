@@ -7,9 +7,11 @@ def fetch_pages(request):
     content = [i.get_json() for i in Content.objects.all()]
     for i in range(0, len(content), 3):
         pages.append(content[i: i + 3])
+    if not pages:
+        return JsonResponse([[]], safe=False)
     return JsonResponse(pages, safe=False)
   except Exception:
-    return JsonResponse([], safe=False)
+    return JsonResponse([[]], safe=False)
 
 def fetch(request):
   try:

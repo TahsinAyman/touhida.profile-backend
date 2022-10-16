@@ -32,6 +32,8 @@ urlpatterns = [
     path('api/v1/achivements/', include("achivements.urls")),
     path('api/v1/comments/', include("comments.urls")),
     path('api/v1/bio/', include("bio.urls")),
+    path('api/v1/title/', include("SiteTitle.urls")),
+    path('api/v1/logo/', include("Logo.urls")),
 
     url(r'^media/(?P<path>.*)$', serve,{'document_root':       settings.MEDIA_ROOT}), 
     url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}), 

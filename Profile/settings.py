@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-su#+o#-!foqp%)v+jd6rw*8yk7q&)vs%lcov%*h019xr8rw008'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 X_FRAME_OPTIONS = '*'
@@ -45,7 +45,9 @@ INSTALLED_APPS = [
     'photos',
     'achivements',
     'comments',
-    "bio"
+    "bio",
+    "SiteTitle",
+    "Logo",
 ]
 
 CORS_ORIGIN_ALLOW_ALL = True
